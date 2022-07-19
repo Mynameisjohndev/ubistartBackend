@@ -1,0 +1,30 @@
+criar conta do usuário [] 
+* email e senha
+
+login do usuário []
+
+criar um item na TODO []
+* inserir data e hora da inserção
+* descrição e prazo de entrega
+
+finalizar TODO []
+* inserir data e hora de finalização
+
+editar TODO []
+* inserir data e hora de edição
+* atualizar descrição e prazo
+
+listar TODOS []
+* somente as minhas todos 
+* se o todo estiver atrasado a aplicação deve informar
+
+login de admin []
+* fornecer uma conta de admin
+
+admin listar todas TODOS []
+* lista deve ser paginada
+* a lista deve conter o e-mail do usuário, descrição e prazo
+
+admin filtrar tarefas atrasadas []
+* a lista deve ser paginada
+* a lista deve conter o e-mail do usuário, descrição e prazo
