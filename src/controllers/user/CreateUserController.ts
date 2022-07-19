@@ -4,8 +4,8 @@ import { Request, Response } from "express";
 import User from '../../schemas/user';
 
 interface IUserSignup{
-  email?: string;
-  password?: string;
+  email: string;
+  password: string;
 }
 
 async function CreateUserController(request: Request, response: Response) {
@@ -42,4 +42,4 @@ async function CreateUserController(request: Request, response: Response) {
 
 }
 
-export { CreateUserController };
+export { CreateUserController, IUserSignup };
