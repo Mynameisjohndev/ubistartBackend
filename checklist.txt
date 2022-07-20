@@ -7,10 +7,10 @@ criar um item na TODO [x]
 * inserir data e hora da inserção
 * descrição e prazo de entrega
 
-finalizar TODO []
+finalizar TODO [x]
 * inserir data e hora de finalização
 
-editar TODO []
+editar TODO [x]
 * inserir data e hora de edição
 * atualizar descrição e prazo
 

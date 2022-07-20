@@ -4,23 +4,27 @@ import Todo from '../../schemas/todo';
 interface ITodoCreate{
   description: string;
   owner: string;
-  endTodo: Date;
+  deadlineTodo: Date;
 }
 
 async function CreateTodoController(request: Request, response: Response) {
-  let { description, endTodo, owner } : ITodoCreate = request.body;
+  let { description, deadlineTodo, owner } : ITodoCreate = request.body;
 
   if(!description){
     return response.status(401).send({ message: "Você deve informar uma descrição"});
   }
 
   if(!owner){
-    return response.status(401).send({ message: "Você deve informar uma descrição" });
+    return response.status(401).send({ message: "Você deve informar seu id" });
   }
 
-  Todo.create({ description, endTodo, owner })
+  if(!deadlineTodo){
+    return response.status(401).send({ message: "Você deve informar a data para finalizar" });
+  }
+
+  Todo.create({ description, deadlineTodo, owner })
   .then(()=>{
-    return response.status(201).send( { description, endTodo, owner } );
+    return response.status(201).send( { description, deadlineTodo, owner } );
   })
   .catch(()=>{
     return response.status(500).send({error: "Tente criar sua tarefa dentro de instantes"})
