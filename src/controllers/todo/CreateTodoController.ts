@@ -14,10 +14,6 @@ async function CreateTodoController(request: Request, response: Response) {
     return response.status(401).send({ message: "Você deve informar uma descrição"});
   }
 
-  if(!endTodo){
-    return response.status(401).send({ message: "Você deve informar a data para finalizar a todo"});
-  }
-
   if(!owner){
     return response.status(401).send({ message: "Você deve informar uma descrição" });
   }

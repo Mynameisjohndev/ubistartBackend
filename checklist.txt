@@ -3,7 +3,7 @@ criar conta do usuário [x]
 
 login do usuário [x]
 
-criar um item na TODO []
+criar um item na TODO [x]
 * inserir data e hora da inserção
 * descrição e prazo de entrega
 
