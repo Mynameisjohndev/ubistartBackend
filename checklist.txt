@@ -14,7 +14,7 @@ editar TODO [x]
 * inserir data e hora de edição
 * atualizar descrição e prazo
 
-listar TODOS []
+listar TODOS [x]
 * somente as minhas todos 
 * se o todo estiver atrasado a aplicação deve informar
 
