@@ -25,18 +25,18 @@ async function CreateUserController(request: Request, response: Response) {
     return response.status(401).send({error: "Usuário já existe na base de dados!"})
   }
   
-  let protecPassword = await hash(password,8);
+  let protectedPassword = await hash(password,8);
 
   let user = {
     email,
-    password: protecPassword,
+    password: protectedPassword,
   };
 
   User.create(user)
   .then(()=>{
     return response.status(201).send({user})
   }).catch(()=>{
-    return response.status(401).send({error: "Tente criar sua conta dentro de instantes"})
+    return response.status(500).send({error: "Tente criar sua conta dentro de instantes"})
   })
 
 

@@ -1,7 +1,7 @@
-criar conta do usuário [] 
+criar conta do usuário [x] 
 * email e senha
 
-login do usuário []
+login do usuário [x]
 
 criar um item na TODO []
 * inserir data e hora da inserção
