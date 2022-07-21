@@ -19,7 +19,7 @@ todoRoutes.patch("/end/:todoId", tokenAuthentication, async (request: Request, r
   return EndTodoController(request, response);
 });
 
-todoRoutes.get("/list", tokenAuthentication, async (request: Request, response: Response) => {
+todoRoutes.get("/list/:admin/:owner", tokenAuthentication, async (request: Request, response: Response) => {
   return ListTodoController(request, response);
 });
 
