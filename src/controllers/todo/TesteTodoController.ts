@@ -1,15 +1,11 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 import Todo from '../../schemas/todo';
 
-interface ITodoCreate{
-  description: string;
-  owner: string;
-  deadlineTodo: Date;
-}
+function CreateTodoController(request: Request,response: Response){
 
-async function CreateTodoController(request: Request, response: Response) {
-  let { description, deadlineTodo, owner } : ITodoCreate = request.body;
+  let { description, deadlineTodo, owner } = request.body;
 
+  console.log( description, deadlineTodo, owner );
   if(!description){
     return response.status(401).send({ message: "Você deve informar uma descrição"});
   }
@@ -29,7 +25,6 @@ async function CreateTodoController(request: Request, response: Response) {
   .catch(()=>{
     return response.status(500).send({error: "Tente criar sua tarefa dentro de instantes"})
   })
-
 }
 
-export { CreateTodoController, ITodoCreate };
+export { CreateTodoController }

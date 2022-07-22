@@ -21,7 +21,7 @@ function tokenAuthentication(
           token,
           JWT_ACCESS_TOKEN
       );
-      next();
+        if(valid) return next();
   } catch (error) {
       return response.status(401).send({error: "Invalid token"});
   }

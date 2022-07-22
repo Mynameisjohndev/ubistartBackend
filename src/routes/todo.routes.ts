@@ -1,8 +1,8 @@
 import { Router, Request , Response } from 'express'
-import { CreateTodoController } from '../controllers/todo/CreateTodoController';
 import { EditTodoController } from '../controllers/todo/EditTodoController';
 import { EndTodoController } from '../controllers/todo/EndTodoController';
 import { ListTodoController } from '../controllers/todo/LIstTodoController';
+import { CreateTodoController } from '../controllers/todo/TesteTodoController';
 import { tokenAuthentication } from '../middlewares/tokenAuthentication';
 
 const todoRoutes = Router();
