@@ -42,6 +42,7 @@ async function SessionUserController(request: Request, response: Response) {
 
   const sessionUser = {
     email: user.email,
+    id: user._id,
     token
   }
 

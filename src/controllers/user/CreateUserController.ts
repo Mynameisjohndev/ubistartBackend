@@ -6,6 +6,7 @@ import User from '../../schemas/user';
 interface IUserSignup{
   email: string;
   password: string;
+  _id?: string;
 }
 
 async function CreateUserController(request: Request, response: Response) {
@@ -34,7 +35,7 @@ async function CreateUserController(request: Request, response: Response) {
 
   User.create(user)
   .then(()=>{
-    return response.status(201).send({user})
+    return response.status(201).send({message: "Usuário criado com sucesso!"})
   }).catch(()=>{
     return response.status(500).send({error: "Tente criar sua conta dentro de instantes"})
   })
