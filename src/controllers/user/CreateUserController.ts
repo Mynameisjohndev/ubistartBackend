@@ -7,6 +7,7 @@ interface IUserSignup{
   email: string;
   password: string;
   _id?: string;
+  admin?: string;
 }
 
 async function CreateUserController(request: Request, response: Response) {

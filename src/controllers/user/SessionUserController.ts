@@ -39,14 +39,24 @@ async function SessionUserController(request: Request, response: Response) {
     subject: user.email,
     expiresIn: "365d",
   });
-
-  const sessionUser = {
-    email: user.email,
-    id: user._id,
-    token
+  if(user.admin){
+    const sessionUser = {
+      email: user.email,
+      id: user._id,
+      token,
+      admin: user.admin
+    }
+    return response.status(200).send(sessionUser);
+  }else{
+    const sessionUser = {
+      email: user.email,
+      id: user._id,
+      token
+    }
+    return response.status(200).send(sessionUser);
   }
 
-  return response.status(200).send(sessionUser);
+
 
 }
 

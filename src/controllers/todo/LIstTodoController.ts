@@ -12,7 +12,7 @@ async function ListTodoController (request: Request, response: Response){
       return response.status(500).send({ error: "Ocorreu um erro no servidor, favor tentar dentro de instantes" });
     }
   }else{ 
-    const allTodo= await Todo.find({owner})
+    const allTodo = await Todo.find({owner})
     
     if(allTodo){
       return response.status(200).send(allTodo);

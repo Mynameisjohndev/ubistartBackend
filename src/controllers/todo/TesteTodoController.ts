@@ -5,7 +5,6 @@ function CreateTodoController(request: Request,response: Response){
 
   let { description, deadlineTodo, owner } = request.body;
 
-  console.log( description, deadlineTodo, owner );
   if(!description){
     return response.status(401).send({ message: "Você deve informar uma descrição"});
   }
