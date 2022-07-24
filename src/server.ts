@@ -11,6 +11,6 @@ app.use(express.json())
 connectMongo();
 app.use(routes);
 
-app.listen(3000,()=>{
+app.listen(3334,()=>{
   console.log("Server is Running");
 })
